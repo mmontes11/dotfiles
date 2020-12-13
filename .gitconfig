@@ -16,7 +16,6 @@
 [credential]
 	helper = store
 [core]
-	# Use custom `.gitignore`
 	excludesfile = ~/.gitignore
 	editor = vi
     pager = delta
