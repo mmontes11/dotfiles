@@ -42,7 +42,6 @@ apps=(
     mongodb-compass
     oracle-jdk
     postman
-    sequel-pro
     slack
     spotify
     telegram
