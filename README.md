@@ -1,9 +1,8 @@
 # dotfiles
-mmontes11's configuration files.
+mmontes11's configuration files. Inspired by [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles).
 
 ### Installation
 
 ```bash
-$ ./brew.sh
-$ ./bootstrap.sh
+$ ./bootstrap.sh --install
 ```

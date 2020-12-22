@@ -1,10 +1,14 @@
 #!/bin/bash
 
+# Command line tools
+xcode-select --install
+
 brew update
 brew upgrade
 
 brew tap vektra/tap
 
+# Packages
 packages=(
     bash
     coreutils
@@ -33,6 +37,7 @@ for i in "${!packages[@]}"; do
     brew install "$package"
 done
 
+# Apps
 apps=(
     dbeaver-community
     docker
@@ -57,3 +62,8 @@ for i in "${!apps[@]}"; do
 done
 
 brew cleanup
+
+# Oh my zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"å
+brew install romkatv/powerlevel10k/powerlevel10k
+echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
