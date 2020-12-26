@@ -46,6 +46,7 @@ apps=(
     menumeters
     mongodb-compass
     oracle-jdk
+    osxfuse
     postman
     slack
     spotify
