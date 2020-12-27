@@ -27,6 +27,7 @@ packages=(
     nvm
     openssh
     tmux
+    sshfs
     vim
     wget
     zsh
