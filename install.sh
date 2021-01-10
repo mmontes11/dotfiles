@@ -20,14 +20,15 @@ packages=(
     helm
     htop
     jq
+    kind
     kubernetes-cli
     minikube
     mockery
     node
     nvm
     openssh
-    tmux
     sshfs
+    tmux
     vim
     wget
     zsh

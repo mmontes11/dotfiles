@@ -15,7 +15,7 @@ function syncDotfiles() {
 		--exclude "LICENSE" \
 		-avh --no-perms . ~
 
-	for file in ~/.{zsh,exports,aliases}; do
+	for file in ~/.{zsh,exports,aliases,functions}; do
 		[ -r "$file" ] && [ -f "$file" ] && echo "source $file" >>~/.zshrc
 	done
 	unset file
