@@ -1,30 +1,30 @@
 [user]
-	mail = martin11lrx@gmail.com
-	email = martin11lrx@gmail.com
-	name = Martín Montes
+mail = martin11lrx@gmail.com
+email = martin11lrx@gmail.com
+name = Martín Montes
 [alias]
-	co = checkout
-	ci = commit
-	st = status
-	br = branch
-	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
-	sup = submodule update --recursive --init
-	sre = submodule foreach --recursive git reset --hard
-	scl = submodule foreach --recursive git clean -fd
+co = checkout
+ci = commit
+st = status
+br = branch
+hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+sup = submodule update --recursive --init
+sre = submodule foreach --recursive git reset --hard
+scl = submodule foreach --recursive git clean -fd
 [github]
-	user = mmontes11
+user = mmontes11
 [credential]
-	helper = store
+helper = store
 [core]
-	excludesfile = ~/.gitignore
-	editor = vi
-    pager = delta
+excludesfile = ~/.gitignore
+editor = vi
+pager = delta
 [delta]
-    plus-color = "#012800"
-    minus-color = "#340001"
-    syntax-theme = Monokai Extended
+plus-color = "#012800"
+minus-color = "#340001"
+syntax-theme = Monokai Extended
 [interactive]
-    diffFilter = delta --color-only
+diffFilter = delta --color-only
 [pull]
-	rebase = true
-	ff = only
+rebase = true
+ff = only
