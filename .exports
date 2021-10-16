@@ -1,7 +1,9 @@
 #!/bin/bash
 
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
 export EDITOR="vi"
-export DOCKER_USERNAME='mmontes11'
-export ZSH_TMUX_AUTOSTART="true"
+
+export GOPATH=$HOME/go
+
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/martin/go/bin
+export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH

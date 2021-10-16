@@ -1,4 +1,7 @@
 #!/bin/bash
 
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias ls="ls -lah"
-alias k8s-token="kubectl -n monitoring describe secrets $(kubectl -n monitoring get secrets | awk '/monitoring-token/ {print $1}') | awk '/token:/ {print $2}'"
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
