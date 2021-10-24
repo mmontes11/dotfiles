@@ -1,5 +1,5 @@
 if [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s workspace
+    tmux attach -t workspace || tmux new -s workspace
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -11,6 +11,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/martin/.oh-my-zsh"
@@ -126,3 +127,4 @@ source /home/martin/.functions
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
