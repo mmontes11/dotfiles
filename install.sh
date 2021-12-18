@@ -1,72 +1,16 @@
 #!/bin/bash
 
-# Command line tools
-xcode-select --install
+set -euo pipefail
 
-brew update
-brew upgrade
-
-brew tap vektra/tap
-
-# Packages
-packages=(
-    bash
-    coreutils
-    gh
-    git
-    git-delta
-    go
-    grep
-    helm
-    htop
-    jq
-    kind
-    kubernetes-cli
-    minikube
-    mockery
-    node
-    nvm
-    openssh
-    sshfs
-    tmux
-    vim
-    wget
-    zsh
+install_scripts=(
+  "scripts/apt.sh"
+  "scripts/snap.sh"
+  "scripts/go.sh"
+  "scripts/docker.sh"
+  "scripts/kubernetes.sh"
+  "scripts/tmux.sh"
 )
 
-for i in "${!packages[@]}"; do
-    package="${packages[$i]}"
-    brew install "$package"
+for i in "${!install_scripts[@]}"; do
+  source "${install_scripts[$i]}"
 done
-
-# Apps
-apps=(
-    dbeaver-community
-    docker
-    google-chrome
-    iterm2
-    menumeters
-    mongodb-compass
-    oracle-jdk
-    osxfuse
-    postman
-    slack
-    spotify
-    telegram
-    visual-studio-code
-    vlc
-    whatsapp
-    zoomus
-)
-
-for i in "${!apps[@]}"; do
-    app="${apps[$i]}"
-    brew install --cask "$app"
-done
-
-brew cleanup
-
-# Oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"å
-brew install romkatv/powerlevel10k/powerlevel10k
-echo 'source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc

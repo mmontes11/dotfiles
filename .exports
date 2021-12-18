@@ -2,8 +2,7 @@
 
 export EDITOR="vi"
 
+# go
 export GOPATH=$HOME/go
-
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/martin/go/bin
-export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH

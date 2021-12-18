@@ -12,7 +12,6 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-
 # Path to your oh-my-zsh installation.
 export ZSH="/home/martin/.oh-my-zsh"
 
@@ -83,17 +82,20 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    docker
-    docker-compose
-    git
-    golang
-    helm
-    kubectl
-    terraform
-    tmux
+  docker
+  git
+  golang
+  helm
+  kubectl
+  node
+  npm
+  tmux
 )
 
 source $ZSH/oh-my-zsh.sh
+source /home/martin/.exports
+source /home/martin/.aliases
+source /home/martin/.functions
 
 # User configuration
 
@@ -121,10 +123,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source /home/martin/.aliases
-source /home/martin/.exports
-source /home/martin/.functions
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-

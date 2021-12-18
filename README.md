@@ -1,8 +1,11 @@
 # dotfiles
-mmontes11's configuration files. Inspired by [mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles).
+Dotfiles and scripts to configure a brand new Ubuntu machine.
 
 ### Installation
 
-```bash
-$ ./bootstrap.sh --install
+``` bash
+sudo bash ./install.sh
 ```
+``` bash
+./dotfiles.sh
+``` 
