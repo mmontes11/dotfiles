@@ -3,6 +3,7 @@
 apt update
 
 pkgs=(
+  autojump
   automake
   bison
   build-essential
