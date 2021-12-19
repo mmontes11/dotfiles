@@ -34,6 +34,11 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 apt install ./google-chrome-stable_current_amd64.deb
 rm google-chrome-stable_current_amd64.deb
 
+# git-delta
+wget https://github.com/dandavison/delta/releases/download/0.11.3/git-delta_0.11.3_amd64.deb
+apt install ./git-delta_0.11.3_amd64.deb
+rm git-delta_0.11.3_amd64.deb
+
 # set zsh as default shell
 chsh -s $(which zsh)
 
