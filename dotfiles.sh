@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 function configureOhMyZsh() {
   # powerlevel10k
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -euo pipefail
-
 install_scripts=(
   "scripts/apt.sh"
   "scripts/snap.sh"

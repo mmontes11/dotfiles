@@ -18,6 +18,7 @@ pkgs=(
   libevent-dev
   libncurses5-dev
   lsb-release
+  net-tools
   pkg-config
   snapd
   vim
