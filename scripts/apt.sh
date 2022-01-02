@@ -11,6 +11,7 @@ pkgs=(
   ca-certificates
   curl
   fzf
+  g15daemon
   git
   gnupg
   htop
