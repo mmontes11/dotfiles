@@ -24,6 +24,7 @@ pkgs=(
   snapd
   vim
   wget
+  xsel
   zsh
 )
 
