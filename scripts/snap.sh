@@ -11,10 +11,12 @@ apps=(
   node
   openjdk
   postman
+  slack
   spotify
   telegram-desktop
   vlc
   whatsapp-for-linux
+  zoom-client
 )
 
 for i in "${!apps[@]}"; do
