@@ -20,12 +20,12 @@ pkgs=(
   libncurses5-dev
   lsb-release
   net-tools
+  pavucontrol
   pkg-config
   snapd
   vim
   wget
   xsel
-  zsh
 )
 
 for i in "${!pkgs[@]}"; do
