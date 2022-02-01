@@ -30,6 +30,10 @@ function configureDotfiles() {
   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 }
 
+echo "Installing software..."
+sudo bash ./install.sh
+
+echo "Configuring dotfiles..."
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
   configureDotfiles
 else
