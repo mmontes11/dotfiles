@@ -43,4 +43,6 @@ else
     configureDotfiles
   fi
 fi
+
 unset configureDotfiles
+unset configureOhMyZsh
