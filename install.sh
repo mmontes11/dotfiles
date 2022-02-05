@@ -1,6 +1,7 @@
 #!/bin/bash
 
 install_scripts=(
+  "scripts/bin.sh"
   "scripts/apt.sh"
   "scripts/snap.sh"
   "scripts/go.sh"
