@@ -5,9 +5,6 @@ apps=(
   dbeaver-ce
   gh
   goland
-  helm
-  kubectl
-  kustomize
   node
   openjdk
   postman
