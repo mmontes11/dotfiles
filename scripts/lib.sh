@@ -31,3 +31,8 @@ function install_tar() {
   mv $BIN_PATH /usr/local/bin/$BIN
   rm -rf $BIN_PATH $BIN
 }
+
+function get_user_home() {
+  USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+  echo $USER_HOME
+}

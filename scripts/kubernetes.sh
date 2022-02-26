@@ -2,6 +2,8 @@
 
 source ./scripts/lib.sh
 
+USER_HOME=$(get_user_home)
+
 # kubectl
 KUBECTL_VERSION=v1.21.3
 KUBECTL_URL=https://dl.k8s.io/release/$KUBECTL_VERSION/bin/linux/amd64/kubectl
@@ -15,7 +17,10 @@ install_tar helm $HELM_URL linux-amd64
 # k9s
 K9S_VERSION=v0.25.15
 K9S_URL=https://github.com/derailed/k9s/releases/download/$K9S_VERSION/k9s_Linux_x86_64.tar.gz
+K9S_THEME=one_dark
+K9S_THEME_URL=https://raw.githubusercontent.com/derailed/k9s/$K9S_VERSION/skins/$K9S_THEME.yml
 install_tar k9s $K9S_URL
+curl -Lo $USER_HOME/.config/k9s/skin.yml $K9S_THEME_URL
 
 # kubectx + kubens
 KUBECTX_VERSION=v0.9.4
