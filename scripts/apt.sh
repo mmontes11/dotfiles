@@ -20,9 +20,13 @@ pkgs=(
   libncurses5-dev
   lsb-release
   net-tools
+  openssh-server
+  openssl
   pavucontrol
   pkg-config
+  sed
   snapd
+  systemd
   vim
   wget
   xsel
