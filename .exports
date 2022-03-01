@@ -6,3 +6,7 @@ export EDITOR="vi"
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/martin/go/bin
+
+# kubectl
+export do="--dry-run=client -o yaml"
+export now="--grace-period=0 --force"
