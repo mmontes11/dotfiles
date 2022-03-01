@@ -12,6 +12,7 @@ pkgs=(
   curl
   fzf
   g15daemon
+  gawk
   git
   gnupg
   htop
