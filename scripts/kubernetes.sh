@@ -30,7 +30,7 @@ KUBENS_URL=https://github.com/ahmetb/kubectx/releases/download/$KUBECTX_VERSION/
 install_bin kubens $KUBENS_URL
 
 # kind
-KIND_VERSION=v0.11.1
+KIND_VERSION=v0.12.0
 KIND_URL=https://kind.sigs.k8s.io/dl/$KIND_VERSION/kind-linux-amd64
 install_bin kind $KIND_URL
 
