@@ -42,3 +42,8 @@ install_tar kustomize $KUSMTOMIZE_URL
 KUBEBUILDER_VERSION=v3.3.0
 KUBEBUILDER_URL=https://github.com/kubernetes-sigs/kubebuilder/releases/download/$KUBEBUILDER_VERSION/kubebuilder_linux_amd64
 install_bin kubebuilder $KUBEBUILDER_URL
+
+# flux
+FLUX_VERSION=v0.27.4
+FLUX_URL=https://github.com/fluxcd/flux2/releases/download/$FLUX_VERSION/flux_0.27.4_linux_amd64.tar.gz
+install_tar flux $FLUX_URL
