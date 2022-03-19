@@ -100,6 +100,7 @@ source $ZSH/oh-my-zsh.sh
 source /home/martin/.exports
 source /home/martin/.aliases
 source /home/martin/.functions
+source /home/martin/.completions
 
 # User configuration
 
