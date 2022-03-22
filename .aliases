@@ -9,3 +9,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # kubectl
 alias kge="k get events --sort-by=.metadata.creationTimestamp"
 alias netshoot="kubectl run netshoot --rm -i --tty --image nicolaka/netshoot -- /bin/bash"
+
+# kubeseal
+alias kubeseal="kubeseal --format yaml"
