@@ -1,7 +1,7 @@
 # 🐧 dotfiles
 Dotfiles and scripts to configure a brand new Ubuntu machine.
 
-### Installation
+### Getting started
 
 Setup dotfiles and install software:
 ``` bash
