@@ -19,12 +19,17 @@ helper = store
 excludesfile = ~/.gitignore
 editor = vi
 pager = delta
-[delta]
-plus-style = "#012800"
-minus-style = "#340001"
-syntax-theme = Monokai Extended
 [interactive]
 diffFilter = delta --color-only
+[delta]
+navigate = true  # use n and N to move between diff sections
+line-numbers = true
+side-by-side = true
+syntax-theme = TwoDark
+[merge]
+conflictstyle = diff3
+[diff]
+colorMoved = default
 [pull]
 rebase = true
 ff = only
