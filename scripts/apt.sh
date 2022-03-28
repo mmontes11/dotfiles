@@ -3,6 +3,7 @@
 apt update
 
 pkgs=(
+  apache2-utils
   autojump
   automake
   bison
