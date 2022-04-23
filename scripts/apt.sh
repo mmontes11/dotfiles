@@ -32,6 +32,7 @@ pkgs=(
   vim
   wget
   xsel
+  zsh
 )
 
 for i in "${!pkgs[@]}"; do
