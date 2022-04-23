@@ -1,5 +1,8 @@
 #!/bin/bash
 
+source ./scripts/lib.sh
+
+USER_HOME=$(get_user_home)
 COMPOSE_VERSION=v2.2.2
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor --batch --yes -o /usr/share/keyrings/docker-archive-keyring.gpg
@@ -10,10 +13,10 @@ echo \
 apt update
 apt install docker-ce docker-ce-cli containerd.io -y
 
-groupadd -f docker
+groupadd docker
 usermod -aG docker $USER
 
 # docker compose
-mkdir -p ~/.docker/cli-plugins/
-curl -SL https://github.com/docker/compose/releases/download/$COMPOSE_VERSION/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
-chmod +x ~/.docker/cli-plugins/docker-compose
+mkdir -p $USER_HOME/.docker/cli-plugins/
+curl -SL https://github.com/docker/compose/releases/download/$COMPOSE_VERSION/docker-compose-linux-x86_64 -o $USER_HOME//.docker/cli-plugins/docker-compose
+chmod +x $USER_HOME/.docker/cli-plugins/docker-compose
