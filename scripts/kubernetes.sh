@@ -20,6 +20,7 @@ K9S_URL=https://github.com/derailed/k9s/releases/download/$K9S_VERSION/k9s_Linux
 K9S_THEME=one_dark
 K9S_THEME_URL=https://raw.githubusercontent.com/derailed/k9s/$K9S_VERSION/skins/$K9S_THEME.yml
 install_tar k9s $K9S_URL
+mkdir -p $USER_HOME/.config/k9s
 curl -Lo $USER_HOME/.config/k9s/skin.yml $K9S_THEME_URL
 
 # kubectx + kubens
