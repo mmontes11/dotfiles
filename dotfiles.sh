@@ -44,5 +44,8 @@ else
   fi
 fi
 
+echo "Sourcing .zshrc..."
+echo "source ~/.zshrc" >> ~/.bashrc
+
 unset configureDotfiles
 unset configureOhMyZsh
