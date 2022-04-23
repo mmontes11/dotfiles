@@ -26,6 +26,7 @@ pkgs=(
   openssl
   pavucontrol
   pkg-config
+  rpi-imager
   sed
   snapd
   systemd
