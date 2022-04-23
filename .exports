@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export EDITOR="vi"
+export EDITOR="vim"
 
 # go
 export GOPATH=$HOME/go
