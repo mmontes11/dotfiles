@@ -44,6 +44,11 @@ KUBEBUILDER_VERSION=v3.3.0
 KUBEBUILDER_URL=https://github.com/kubernetes-sigs/kubebuilder/releases/download/$KUBEBUILDER_VERSION/kubebuilder_linux_amd64
 install_bin kubebuilder $KUBEBUILDER_URL
 
+# cilium
+CILIUM_VERSION=v0.11.1
+CILIUM_URL=https://github.com/cilium/cilium-cli/releases/download/$CILIUM_VERSION/cilium-linux-amd64.tar.gz
+install_tar cilium $CILIUM_URL
+
 # flux
 FLUX_VERSION=v0.27.4
 FLUX_URL=https://github.com/fluxcd/flux2/releases/download/$FLUX_VERSION/flux_0.27.4_linux_amd64.tar.gz
