@@ -1,3 +1,9 @@
 #!/bin/bash
 
-command -v flux >/dev/null && . <(flux completion zsh)
+source <(cilium completion zsh)
+source <(flux completion zsh)
+source <(helm completion zsh)
+source <(kind completion zsh)
+source <(kubebuilder completion zsh)
+source <(kubectl completion zsh)
+source <(kustomize completion zsh)
