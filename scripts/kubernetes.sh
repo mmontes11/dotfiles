@@ -14,15 +14,6 @@ HELM_VERSION=v3.8.0
 HELM_URL=https://get.helm.sh/helm-$HELM_VERSION-linux-amd64.tar.gz
 install_tar helm $HELM_URL linux-amd64
 
-# k9s
-K9S_VERSION=v0.25.15
-K9S_URL=https://github.com/derailed/k9s/releases/download/$K9S_VERSION/k9s_Linux_x86_64.tar.gz
-K9S_THEME=one_dark
-K9S_THEME_URL=https://raw.githubusercontent.com/derailed/k9s/$K9S_VERSION/skins/$K9S_THEME.yml
-install_tar k9s $K9S_URL
-mkdir -p $USER_HOME/.config/k9s
-curl -Lo $USER_HOME/.config/k9s/skin.yml $K9S_THEME_URL
-
 # kubectx + kubens
 KUBECTX_VERSION=v0.9.4
 KUBECTX_URL=https://github.com/ahmetb/kubectx/releases/download/$KUBECTX_VERSION/kubectx
@@ -58,3 +49,37 @@ install_tar flux $FLUX_URL
 KUBESEAL_VERSION=0.17.3
 KUBESEAL_URL=https://github.com/bitnami-labs/sealed-secrets/releases/download/v$KUBESEAL_VERSION/kubeseal-$KUBESEAL_VERSION-linux-amd64.tar.gz
 install_tar kubeseal $KUBESEAL_URL
+
+# stern
+STERN_VERSION=1.11.0
+STERN_URL=https://github.com/wercker/stern/releases/download/$STERN_VERSION/stern_linux_amd64
+install_bin stern $STERN_URL
+
+# k9s
+K9S_VERSION=v0.25.18
+K9S_URL=https://github.com/derailed/k9s/releases/download/$K9S_VERSION/k9s_Linux_x86_64.tar.gz
+install_tar k9s $K9S_URL
+mkdir -p $USER_HOME/.config/k9s
+
+K9S_THEME=one_dark
+K9S_THEME_URL=https://raw.githubusercontent.com/derailed/k9s/$K9S_VERSION/skins/$K9S_THEME.yml
+curl -Lo $USER_HOME/.config/k9s/skin.yml $K9S_THEME_URL
+
+K9S_PLUGINS=(
+  flux
+  helm_values
+  job_suspend
+  log_stern
+  watch_events
+)
+K9S_PLUGIN_FILE=plugin.yml
+K9S_PLUGIN_CONFIG=$USER_HOME/.config/k9s/plugin.yml
+rm $K9S_PLUGIN_CONFIG
+for i in "${!K9S_PLUGINS[@]}"; do
+  K9S_PLUGIN="${K9S_PLUGINS[$i]}" 
+  # TODO: use K9S_VERSION when all the plugins are available
+  K9S_PLUGIN_URL=https://raw.githubusercontent.com/derailed/k9s/master/plugins/$K9S_PLUGIN.yml
+  curl -Lo $K9S_PLUGIN_FILE $K9S_PLUGIN_URL
+  cat $K9S_PLUGIN_FILE >> $K9S_PLUGIN_CONFIG
+done
+rm $K9S_PLUGIN_FILE
