@@ -68,7 +68,6 @@ curl -Lo $USER_HOME/.config/k9s/skin.yml $K9S_THEME_URL
 K9S_PLUGINS=(
   flux
   helm_values
-  job_suspend
   log_stern
   watch_events
 )
