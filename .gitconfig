@@ -25,7 +25,7 @@ diffFilter = delta --color-only
 navigate = true  # use n and N to move between diff sections
 line-numbers = true
 side-by-side = true
-syntax-theme = TwoDark
+syntax-theme = Nord
 [merge]
 conflictstyle = diff3
 [diff]
