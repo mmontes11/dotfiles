@@ -22,16 +22,16 @@ KUBENS_URL=https://github.com/ahmetb/kubectx/releases/download/$KUBECTX_VERSION/
 install_bin kubens $KUBENS_URL
 
 # kind
-KIND_VERSION=v0.12.0
+KIND_VERSION=v0.14.0
 KIND_URL=https://kind.sigs.k8s.io/dl/$KIND_VERSION/kind-linux-amd64
 install_bin kind $KIND_URL
 
 # kustomize
-KUSMTOMIZE_URL=https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv4.5.2/kustomize_v4.5.2_linux_amd64.tar.gz
+KUSMTOMIZE_URL=https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv4.5.5/kustomize_v4.5.5_linux_amd64.tar.gz
 install_tar kustomize $KUSMTOMIZE_URL
 
 # kubebuilder
-KUBEBUILDER_VERSION=v3.3.0
+KUBEBUILDER_VERSION=v3.4.1
 KUBEBUILDER_URL=https://github.com/kubernetes-sigs/kubebuilder/releases/download/$KUBEBUILDER_VERSION/kubebuilder_linux_amd64
 install_bin kubebuilder $KUBEBUILDER_URL
 
