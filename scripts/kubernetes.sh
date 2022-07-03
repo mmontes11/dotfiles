@@ -5,12 +5,12 @@ source ./scripts/lib.sh
 USER_HOME=$(get_user_home)
 
 # kubectl
-KUBECTL_VERSION=v1.21.3
+KUBECTL_VERSION=v1.22.9
 KUBECTL_URL=https://dl.k8s.io/release/$KUBECTL_VERSION/bin/linux/amd64/kubectl
 install_bin kubectl $KUBECTL_URL
 
 # helm
-HELM_VERSION=v3.8.0
+HELM_VERSION=v3.9.0
 HELM_URL=https://get.helm.sh/helm-$HELM_VERSION-linux-amd64.tar.gz
 install_tar helm $HELM_URL linux-amd64
 
@@ -31,12 +31,12 @@ KUSMTOMIZE_URL=https://github.com/kubernetes-sigs/kustomize/releases/download/ku
 install_tar kustomize $KUSMTOMIZE_URL
 
 # kubebuilder
-KUBEBUILDER_VERSION=v3.4.1
+KUBEBUILDER_VERSION=v3.5.0
 KUBEBUILDER_URL=https://github.com/kubernetes-sigs/kubebuilder/releases/download/$KUBEBUILDER_VERSION/kubebuilder_linux_amd64
 install_bin kubebuilder $KUBEBUILDER_URL
 
 # cilium
-CILIUM_VERSION=v0.11.1
+CILIUM_VERSION=v0.11.10
 CILIUM_URL=https://github.com/cilium/cilium-cli/releases/download/$CILIUM_VERSION/cilium-linux-amd64.tar.gz
 install_tar cilium $CILIUM_URL
 
@@ -56,7 +56,7 @@ STERN_URL=https://github.com/wercker/stern/releases/download/$STERN_VERSION/ster
 install_bin stern $STERN_URL
 
 # k9s
-K9S_VERSION=v0.25.18
+K9S_VERSION=v0.25.21
 K9S_URL=https://github.com/derailed/k9s/releases/download/$K9S_VERSION/k9s_Linux_x86_64.tar.gz
 install_tar k9s $K9S_URL
 mkdir -p $USER_HOME/.config/k9s
