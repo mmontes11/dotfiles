@@ -56,12 +56,12 @@ STERN_URL=https://github.com/wercker/stern/releases/download/$STERN_VERSION/ster
 install_bin stern $STERN_URL
 
 # k9s
-K9S_VERSION=v0.25.21
+K9S_VERSION=v0.26.0
 K9S_URL=https://github.com/derailed/k9s/releases/download/$K9S_VERSION/k9s_Linux_x86_64.tar.gz
 install_tar k9s $K9S_URL
 mkdir -p $USER_HOME/.config/k9s
 
-K9S_THEME=one_dark
+K9S_THEME=nord
 K9S_THEME_URL=https://raw.githubusercontent.com/derailed/k9s/$K9S_VERSION/skins/$K9S_THEME.yml
 curl -Lo $USER_HOME/.config/k9s/skin.yml $K9S_THEME_URL
 
@@ -76,8 +76,7 @@ K9S_PLUGIN_CONFIG=$USER_HOME/.config/k9s/plugin.yml
 rm $K9S_PLUGIN_CONFIG
 for i in "${!K9S_PLUGINS[@]}"; do
   K9S_PLUGIN="${K9S_PLUGINS[$i]}" 
-  # TODO: use K9S_VERSION when all the plugins are available
-  K9S_PLUGIN_URL=https://raw.githubusercontent.com/derailed/k9s/master/plugins/$K9S_PLUGIN.yml
+  K9S_PLUGIN_URL=https://raw.githubusercontent.com/derailed/k9s/$K9S_VERSION/plugins/$K9S_PLUGIN.yml
   curl -Lo $K9S_PLUGIN_FILE $K9S_PLUGIN_URL
   cat $K9S_PLUGIN_FILE >> $K9S_PLUGIN_CONFIG
 done
