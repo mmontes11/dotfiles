@@ -5,7 +5,7 @@ source ./scripts/lib.sh
 USER_HOME=$(get_user_home)
 
 # kubectl
-KUBECTL_VERSION=v1.22.9
+KUBECTL_VERSION=v1.23.6
 KUBECTL_URL=https://dl.k8s.io/release/$KUBECTL_VERSION/bin/linux/amd64/kubectl
 install_bin kubectl $KUBECTL_URL
 
@@ -56,7 +56,7 @@ STERN_URL=https://github.com/wercker/stern/releases/download/$STERN_VERSION/ster
 install_bin stern $STERN_URL
 
 # k9s
-K9S_VERSION=v0.26.0
+K9S_VERSION=v0.26.3
 K9S_URL=https://github.com/derailed/k9s/releases/download/$K9S_VERSION/k9s_Linux_x86_64.tar.gz
 install_tar k9s $K9S_URL
 mkdir -p $USER_HOME/.config/k9s
