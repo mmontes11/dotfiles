@@ -35,6 +35,11 @@ KUBEBUILDER_VERSION=v3.5.0
 KUBEBUILDER_URL=https://github.com/kubernetes-sigs/kubebuilder/releases/download/$KUBEBUILDER_VERSION/kubebuilder_linux_amd64
 install_bin kubebuilder $KUBEBUILDER_URL
 
+# clusterctl
+CLUSTERCTL_VERSION=v1.2.0
+CLUSTERCTL_URL=https://github.com/kubernetes-sigs/cluster-api/releases/download/$CLUSTERCTL_VERSION/clusterctl-linux-amd64
+install_bin clusterctl $CLUSTERCTL_URL
+
 # cilium
 CILIUM_VERSION=v0.11.10
 CILIUM_URL=https://github.com/cilium/cilium-cli/releases/download/$CILIUM_VERSION/cilium-linux-amd64.tar.gz
