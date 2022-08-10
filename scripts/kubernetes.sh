@@ -50,6 +50,11 @@ FLUX_VERSION=v0.27.4
 FLUX_URL=https://github.com/fluxcd/flux2/releases/download/$FLUX_VERSION/flux_0.27.4_linux_amd64.tar.gz
 install_tar flux $FLUX_URL
 
+# cert-manager
+CM_VERSION=v1.9.1
+CM_URL=https://github.com/cert-manager/cert-manager/releases/download/$CM_VERSION/cmctl-linux-amd64.tar.gz
+install_tar cmctl $CM_URL
+
 # kubeseal
 KUBESEAL_VERSION=0.17.3
 KUBESEAL_URL=https://github.com/bitnami-labs/sealed-secrets/releases/download/v$KUBESEAL_VERSION/kubeseal-$KUBESEAL_VERSION-linux-amd64.tar.gz
