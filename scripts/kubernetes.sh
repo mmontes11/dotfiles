@@ -74,7 +74,7 @@ K9S_PLUGIN_CONFIG=$USER_HOME/.config/k9s/plugin.yml
 rm $K9S_PLUGIN_CONFIG
 for i in "${!K9S_PLUGINS[@]}"; do
   K9S_PLUGIN="${K9S_PLUGINS[$i]}" 
-  K9S_PLUGIN_URL=https://raw.githubusercontent.com/derailed/k9s/$K9S_VERSION/plugins/$K9S_PLUGIN.yml
+  K9S_PLUGIN_URL=https://raw.githubusercontent.com/derailed/k9s/master/plugins/$K9S_PLUGIN.yml
   curl -Lo $K9S_PLUGIN_FILE $K9S_PLUGIN_URL
   cat $K9S_PLUGIN_FILE >> $K9S_PLUGIN_CONFIG
 done
