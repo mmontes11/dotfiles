@@ -28,6 +28,7 @@ pkgs=(
   pkg-config
   rpi-imager
   sed
+  sshfs
   snapd
   systemd
   tailscale
