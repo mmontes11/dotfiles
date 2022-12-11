@@ -8,6 +8,7 @@ install_scripts=(
   "scripts/docker.sh"
   "scripts/kubernetes.sh"
   "scripts/tmux.sh"
+  "scripts/tailscale.sh"
 )
 
 for i in "${!install_scripts[@]}"; do

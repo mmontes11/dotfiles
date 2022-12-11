@@ -31,7 +31,6 @@ pkgs=(
   sshfs
   snapd
   systemd
-  tailscale
   vim
   wget
   xsel
@@ -54,9 +53,5 @@ rm git-delta_0.11.3_amd64.deb
 
 # set zsh as default shell
 chsh -s $(which zsh)
-
-# configure tailscale
-tailscale up
-tailscale status
 
 apt autoremove -y
