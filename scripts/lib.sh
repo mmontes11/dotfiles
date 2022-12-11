@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eo pipefail
+
 function install_bin() {
   BIN=$1
   URL=$2
@@ -35,4 +37,17 @@ function install_tar() {
 function get_user_home() {
   USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
   echo $USER_HOME
+}
+
+function get_architecture() {
+  ARCH=$(uname -m)
+  if [ $ARCH == "x86_64" ]; then
+    echo "amd64"
+  elif [ $ARCH == "aarch64" ]; then
+    echo "arm64"
+  elif [[ $ARCH == arm* ]]; then
+    echo "arm"
+  else
+    echo ""
+  fi
 }
