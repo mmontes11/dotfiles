@@ -8,5 +8,5 @@ curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/jammy.tailscale-keyring.list
 apt update
 apt install -y gcc libgtk-3-dev libayatana-appindicator3-dev tailscale
 
-tailscale up
+tailscale up --accept-dns --accept-routes
 tailscale status
