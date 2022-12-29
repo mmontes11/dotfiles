@@ -10,5 +10,5 @@ Setup dotfiles and install software:
 
 Install software only:
 ``` bash
-sudo bash ./install.sh
+sudo -u $USER bash install.sh
 ``` 

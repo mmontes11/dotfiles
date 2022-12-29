@@ -31,7 +31,7 @@ function configureDotfiles() {
 }
 
 echo "Installing software..."
-sudo bash ./install.sh
+sudo -u $USER bash install.sh
 
 echo "Configuring dotfiles..."
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

@@ -90,6 +90,7 @@ plugins=(
   kubectl
   node
   npm
+  nvm
   tmux
   zsh-autosuggestions
   zsh-completions
