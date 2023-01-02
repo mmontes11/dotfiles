@@ -22,6 +22,7 @@ pkgs=(
   libncurses5-dev
   lsb-release
   net-tools
+  nfs-common
   openssh-server
   openssl
   pavucontrol
