@@ -6,11 +6,9 @@ alias l='ls -CF'
 alias ls="ls -lah"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# kubectl
+# kubernetes
 alias kge="k get events --sort-by=.metadata.creationTimestamp"
 alias kdf="k delete --force --grace-period 0"
 alias kyaml="k --dry-run=client -o yaml"
 alias netshoot="kubectl run netshoot --rm -i --tty --image nicolaka/netshoot -- /bin/bash"
-
-# kubeseal
 alias kubeseal="kubeseal --format yaml"

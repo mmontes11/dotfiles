@@ -16,3 +16,7 @@ function envup() {
     return 1
   fi
 }
+
+function openssl_bundle() {
+  openssl storeutl -noout -text -certs $1
+}
