@@ -1,7 +1,7 @@
 [user]
 mail = martin11lrx@gmail.com
 email = martin11lrx@gmail.com
-name = Martín Montes
+name = Martin Montes
 [alias]
 co = checkout
 ci = commit
@@ -19,6 +19,8 @@ helper = store
 excludesfile = ~/.gitignore
 editor = vi
 pager = delta
+[commit]
+template = ~/.gittemplate
 [interactive]
 diffFilter = delta --color-only
 [delta]
