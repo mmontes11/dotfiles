@@ -12,7 +12,6 @@ apps=(
   spotify
   telegram-desktop
   vlc
-  whatsapp-for-linux
   zoom-client
 )
 
