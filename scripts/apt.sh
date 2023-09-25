@@ -1,6 +1,12 @@
 #!/bin/bash
 
+# repos
+wget https://www.synaptics.com/sites/default/files/Ubuntu/pool/stable/main/all/synaptics-repository-keyring.deb
+apt install ./synaptics-repository-keyring.deb
+rm ./synaptics-repository-keyring.deb
+
 apt update
+apt autoremove
 
 pkgs=(
   apache2-utils
@@ -11,6 +17,7 @@ pkgs=(
   byacc
   ca-certificates
   curl
+  displaylink-driver
   fzf
   g15daemon
   gawk
@@ -29,8 +36,8 @@ pkgs=(
   pkg-config
   rpi-imager
   sed
-  sshfs
   snapd
+  sshfs
   systemd
   vim
   wget
