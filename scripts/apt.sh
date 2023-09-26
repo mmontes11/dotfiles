@@ -15,6 +15,7 @@ pkgs=(
   build-essential
   byacc
   ca-certificates
+  cmatrix
   curl
   displaylink-driver
   fzf
@@ -23,6 +24,7 @@ pkgs=(
   git
   gnupg
   htop
+  hollywood
   jq
   libevent-dev
   libncurses5-dev
