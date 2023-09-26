@@ -6,7 +6,6 @@ apt install ./synaptics-repository-keyring.deb
 rm ./synaptics-repository-keyring.deb
 
 apt update
-apt autoremove
 
 pkgs=(
   apache2-utils
