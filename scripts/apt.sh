@@ -23,8 +23,8 @@ pkgs=(
   gawk
   git
   gnupg
-  htop
   hollywood
+  htop
   jq
   libevent-dev
   libncurses5-dev
@@ -35,6 +35,7 @@ pkgs=(
   openssl
   pavucontrol
   pkg-config
+  qrencode
   rpi-imager
   sed
   snapd
