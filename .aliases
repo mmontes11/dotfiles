@@ -12,3 +12,6 @@ alias kdf="k delete --force --grace-period 0"
 alias kyaml="k --dry-run=client -o yaml"
 alias netshoot="kubectl run netshoot --rm -i --tty --image nicolaka/netshoot -- /bin/bash"
 alias kubeseal="kubeseal --format yaml"
+
+# git
+alias gitconfig="git config --local include.path ../.gitconfig"
