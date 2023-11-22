@@ -6,9 +6,3 @@ export EDITOR="vim"
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/martin/go/bin
-
-# kubectl
-alias kge="k get events --sort-by=.metadata.creationTimestamp"
-alias kry="k run --dry-run=client -o yaml"
-alias kdf="k delete --force --grace-period 0"
-alias netshoot="kubectl run netshoot --rm -i --tty --image nicolaka/netshoot -- /bin/bash"
