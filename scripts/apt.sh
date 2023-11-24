@@ -28,13 +28,17 @@ pkgs=(
   jq
   libevent-dev
   libncurses5-dev
+  libvirt-daemon
+  libvirt-daemon-system
   lsb-release
   net-tools
+  network-manager
   nfs-common
   openssh-server
   openssl
   pavucontrol
   pkg-config
+  qemu-kvm
   qrencode
   rpi-imager
   sed
