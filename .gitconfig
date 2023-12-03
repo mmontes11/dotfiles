@@ -35,3 +35,7 @@ colorMoved = default
 [pull]
 rebase = true
 ff = only
+[push]
+autoSetupRemote = true
+[mailmap]
+file = ~/.mailmap
