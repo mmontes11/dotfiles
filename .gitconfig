@@ -39,3 +39,5 @@ ff = only
 autoSetupRemote = true
 [mailmap]
 file = ~/.mailmap
+[includeIf "gitdir:~/work/"]
+path = .gitconfig.work
