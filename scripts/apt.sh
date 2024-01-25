@@ -9,6 +9,7 @@ apt update
 
 pkgs=(
   apache2-utils
+  arandr
   autojump
   automake
   bison
