@@ -4,7 +4,11 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias ls="ls -lah"
+
 alias audio-restart='pulseaudio --kill && pulseaudio --start'
+alias sudo='sudo '
+alias tsc="tailscale"
+alias tctl="talosctl"
 
 # kubernetes
 alias kge="k get events --sort-by=.metadata.creationTimestamp"
