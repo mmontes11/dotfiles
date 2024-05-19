@@ -4,10 +4,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias ls="ls -lah"
-
 alias audio-restart='pulseaudio --kill && pulseaudio --start'
-alias sudo='sudo '
-alias tsc="tailscale"
+alias sudo='sudo ' # use sudo with alases
+alias ts="tailscale"
 alias tctl="talosctl"
 
 # kubernetes
@@ -16,6 +15,3 @@ alias kdf="k delete --force --grace-period 0"
 alias kyaml="k --dry-run=client -o yaml"
 alias netshoot="kubectl run netshoot --rm -i --tty --image nicolaka/netshoot -- /bin/bash"
 alias kubeseal="kubeseal --format yaml"
-
-# git
-alias gitconfig="git config --local include.path ../.gitconfig"
