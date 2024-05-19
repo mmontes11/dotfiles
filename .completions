@@ -1,9 +1,24 @@
 #!/bin/bash
 
-source <(cilium completion zsh)
-source <(flux completion zsh)
-source <(helm completion zsh)
-source <(kind completion zsh)
-source <(kubebuilder completion zsh)
-source <(kubectl completion zsh)
-source <(kustomize completion zsh)
+CMDS=(
+  cilium
+  cmctl
+  crc
+  flux
+  helm
+  k9s
+  kind
+  kubebuilder
+  kubectl
+  kustomize
+  oc
+  operator-sdk
+  opm
+  tailscale
+  talosctl
+  vcluster
+)
+for CMD in "${CMDS[@]}"; do
+  source <($CMD completion zsh)
+done
+source <(yq shell-completion zsh)
