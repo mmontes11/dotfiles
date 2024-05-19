@@ -5,6 +5,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias ls="ls -lah"
 alias audio-restart='pulseaudio --kill && pulseaudio --start'
+alias gitconfig="git config --local include.path ../.gitconfig"
 alias sudo='sudo ' # use sudo with alases
 alias ts="tailscale"
 alias tctl="talosctl"
