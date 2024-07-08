@@ -1,6 +1,8 @@
 #!/bin/bash
 
 export EDITOR="vim"
+export XCURSOR_PATH=$RUNTIME/usr/share/icons
+export PATH=$PATH:/home/martin/.local/bin/
 
 # go
 export GOPATH=$HOME/go
