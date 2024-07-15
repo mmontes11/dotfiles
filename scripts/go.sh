@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GO_VERSION=1.22.1
+GO_VERSION=1.22.5
 GO_SOURCE=go$GO_VERSION.linux-amd64.tar.gz
 
 wget https://go.dev/dl/$GO_SOURCE
