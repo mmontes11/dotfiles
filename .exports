@@ -11,3 +11,4 @@ export PATH=$PATH:$HOME/go/bin
 
 # kubernetes
 export KUBECONFIG=$HOME/.kube/config
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
