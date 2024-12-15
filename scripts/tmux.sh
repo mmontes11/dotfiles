@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TMUX_VERSION=3.2a
+TMUX_VERSION=3.5a
 
 apt update
 
