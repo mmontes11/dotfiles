@@ -10,6 +10,7 @@ apt update
 pkgs=(
   apache2-utils
   arandr
+  arping
   autojump
   automake
   bison
@@ -17,6 +18,7 @@ pkgs=(
   byacc
   ca-certificates
   cmatrix
+  conntrack
   curl
   displaylink-driver
   fzf
@@ -26,6 +28,9 @@ pkgs=(
   gnupg
   hollywood
   htop
+  iftop
+  iotop
+  iperf3
   jq
   libevent-dev
   libncurses5-dev
@@ -35,6 +40,7 @@ pkgs=(
   net-tools
   network-manager
   nfs-common
+  nmap
   openssh-server
   openssl
   pavucontrol
@@ -44,17 +50,18 @@ pkgs=(
   rpi-imager
   sed
   snapd
+  socat
   sshfs
   systemd
+  tcpdump
+  traceroute
   vim
   wget
   xsel
   zsh
 )
 
-for i in "${!pkgs[@]}"; do
-  apt install "${pkgs[$i]}" -y
-done
+apt install -y "${pkgs[@]}"
 
 # chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
