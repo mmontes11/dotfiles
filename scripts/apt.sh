@@ -40,6 +40,7 @@ pkgs=(
   net-tools
   network-manager
   nfs-common
+  nload
   nmap
   openssh-server
   openssl
