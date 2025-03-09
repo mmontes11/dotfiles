@@ -52,6 +52,7 @@ pkgs=(
   sed
   snapd
   socat
+  speedtest-cli
   sshfs
   systemd
   tcpdump
