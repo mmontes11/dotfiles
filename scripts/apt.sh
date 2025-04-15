@@ -26,6 +26,7 @@ pkgs=(
   gawk
   git
   gnupg
+  graphviz
   hollywood
   htop
   iftop
