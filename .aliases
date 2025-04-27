@@ -6,9 +6,8 @@ alias l='ls -CF'
 alias ls="ls -lah"
 alias audio-restart='pulseaudio --kill && pulseaudio --start'
 alias gitconfig="git config --local include.path ../.gitconfig"
-alias sudo='sudo ' # use sudo with alases
+alias sudo='sudo ' # use sudo with aliases
 alias ts="tailscale"
-alias tctl="talosctl"
 
 # kubernetes
 alias kge="k get events --sort-by=.metadata.creationTimestamp"
@@ -17,3 +16,4 @@ alias kyaml="k --dry-run=client -o yaml"
 alias netshoot="kubectl run netshoot --rm -i --tty --image nicolaka/netshoot -- /bin/bash"
 alias kubeseal="kubeseal --format yaml"
 alias rc="kubectl rook-ceph -n storage"
+alias tctl="talosctl"

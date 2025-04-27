@@ -20,3 +20,12 @@ function envup() {
 function openssl_bundle() {
   openssl storeutl -noout -text -certs $1
 }
+
+function krr() {
+  if [[ "$1" == "simple" ]]; then
+    shift 1
+    command krr simple -p  https://prometheus.mmontes-internal.duckdns.org/ "$@"
+  else
+    command krr "$@"
+  fi
+}
