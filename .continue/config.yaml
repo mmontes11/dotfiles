@@ -6,7 +6,7 @@ name: Local Agent
 version: 1.0.0
 schema: v1
 models:
-  - name: Code
+  - name: Autocomplete
     provider: ollama
     # model: codestral:22b
     # model: qwen2.5-coder:1.5b
@@ -15,9 +15,6 @@ models:
     apiBase: https://ollama.mmontes-internal.duckdns.org/
     roles:
       - autocomplete
-      - chat
-      - edit
-      - apply
     defaultCompletionOptions:
       temperature: 0.25
       reasoning: false
@@ -37,3 +34,13 @@ models:
       maxSuffixPercentage: 0.1
       debounceDelay: 2000
       modelTimeout: 60000
+  - name: Code
+    provider: ollama
+    model: qwen3-coder:30b
+    apiBase: https://ollama.mmontes-internal.duckdns.org/
+    roles:
+      - apply
+      - chat
+      - edit
+    capabilities:
+      - tool_use
