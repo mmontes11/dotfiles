@@ -1,0 +1,39 @@
+# See:
+# - https://docs.continue.dev/ide-extensions/autocomplete/model-setup
+# - https://docs.continue.dev/customize/deep-dives/autocomplete
+# - https://docs.continue.dev/reference#models
+name: Local Agent
+version: 1.0.0
+schema: v1
+models:
+  - name: Code
+    provider: ollama
+    # model: codestral:22b
+    # model: qwen2.5-coder:1.5b
+    # model: qwen2.5-coder:7b
+    model: qwen3-coder:30b
+    apiBase: https://ollama.mmontes-internal.duckdns.org/
+    roles:
+      - autocomplete
+      - chat
+      - edit
+      - apply
+    defaultCompletionOptions:
+      temperature: 0.25
+      reasoning: false
+      maxTokens: 100
+      topK: 40
+      topP: 0.9
+      minP: 0.05
+    autocompleteOptions:
+      disable: false
+      useCache: true
+      useImports: true
+      useRecentlyEdited: true
+      useRecentlyOpened: true
+      onlyMyCode: false
+      maxPromptTokens: 512
+      prefixPercentage: 0.2
+      maxSuffixPercentage: 0.1
+      debounceDelay: 2000
+      modelTimeout: 60000
