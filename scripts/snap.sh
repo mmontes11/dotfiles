@@ -3,6 +3,7 @@
 apps=(
   code
   dbeaver-ce
+  discord
   gh
   goland
   node
