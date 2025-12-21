@@ -12,7 +12,7 @@ models:
     # model: qwen2.5-coder:1.5b
     # model: qwen2.5-coder:7b
     model: qwen3-coder:30b
-    apiBase: https://ollama.mmontes-internal.duckdns.org/
+    apiBase: https://ollama.mmontes-internal.duckdns.org
     roles:
       - autocomplete
     defaultCompletionOptions:
@@ -37,7 +37,7 @@ models:
   - name: Code
     provider: ollama
     model: qwen3-coder:30b
-    apiBase: https://ollama.mmontes-internal.duckdns.org/
+    apiBase: https://ollama.mmontes-internal.duckdns.org
     roles:
       - apply
       - chat
