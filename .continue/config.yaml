@@ -44,3 +44,11 @@ models:
       - edit
     capabilities:
       - tool_use
+context:
+  - provider: code
+  - provider: docs
+  - provider: diff
+  - provider: terminal
+  - provider: problems
+  - provider: folder
+  - provider: codebase
