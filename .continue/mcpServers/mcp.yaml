@@ -1,0 +1,10 @@
+name: Local AI
+version: 0.0.1
+schema: v1
+mcpServers:
+  - name: Kubernetes
+    type: streamable-http
+    url: https://mcp-kubernetes.mmontes-internal.duckdns.org/mcp
+  - name: Grafana
+    type: streamable-http
+    url: https://mcp-grafana.mmontes-internal.duckdns.org/mcp
