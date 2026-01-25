@@ -8,3 +8,9 @@ mcpServers:
   - name: Grafana
     type: streamable-http
     url: https://mcp-grafana.mmontes-internal.duckdns.org/mcp
+  - name: Photprism mmontes
+    type: streamable-http
+    url: https://mcp-photoprism-mmontes.mmontes-internal.duckdns.org/mcp
+  - name: Photprism xiaowen
+    type: streamable-http
+    url: https://mcp-photoprism-xiaowen.mmontes-internal.duckdns.org/mcp
