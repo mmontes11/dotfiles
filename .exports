@@ -13,6 +13,9 @@ export PATH=$PATH:$HOME/go/bin
 export KUBECONFIG=$HOME/.kube/config
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
+# ollama
+export OLLAMA_HOST=ollama.mmontes-internal.duckdns.org:443
+
 # claude
 export ANTHROPIC_AUTH_TOKEN=ollama
 export ANTHROPIC_API_KEY=""
