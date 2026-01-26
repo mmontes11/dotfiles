@@ -17,3 +17,7 @@ alias netshoot="kubectl run netshoot --rm -i --tty --image nicolaka/netshoot -- 
 alias kubeseal="kubeseal --format yaml"
 alias rc="kubectl rook-ceph -n storage"
 alias t="talosctl"
+
+# ai
+alias o="ollama"
+alias cl="claude"
