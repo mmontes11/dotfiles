@@ -14,7 +14,7 @@ export KUBECONFIG=$HOME/.kube/config
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
 # ollama
-export OLLAMA_HOST=ollama.mmontes-internal.duckdns.org:443
+export OLLAMA_HOST==https://ollama.mmontes-internal.duckdns.org:443
 
 # claude
 export ANTHROPIC_AUTH_TOKEN=ollama
