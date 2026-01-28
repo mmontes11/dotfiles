@@ -20,4 +20,3 @@ alias t="talosctl"
 
 # ai
 alias o="ollama"
-alias cl="claude"
