@@ -9,6 +9,7 @@ alias gitconfig="git config --local include.path ../.gitconfig"
 alias sudo='sudo ' # use sudo with aliases
 alias ts="tailscale"
 alias o="ollama"
+alias oc="opencode"
 
 # kubernetes
 alias kge="k get events --sort-by=.metadata.creationTimestamp"
