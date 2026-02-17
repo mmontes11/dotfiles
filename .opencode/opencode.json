@@ -31,5 +31,36 @@
         }
       }
     }
+  },
+  "mcp": {
+    "kubernetes": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp-kubernetes.mmontes-internal.duckdns.org/mcp"
+    },
+    "grafana": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp-grafana.mmontes-internal.duckdns.org/mcp"
+    },
+    "photprism-mmontes": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp-photoprism-mmontes.mmontes-internal.duckdns.org/mcp"
+    },
+    "photprism-xiaowen": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp-photoprism-xiaowen.mmontes-internal.duckdns.org/mcp"
+    },
+    "github": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer GH_TOKEN",
+        "X-MCP-Toolsets": "repos,issues,pull_requests,actions"
+      }
+    }
   }
 }
