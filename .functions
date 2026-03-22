@@ -29,3 +29,30 @@ function krr() {
     command krr "$@"
   fi
 }
+
+function llm_sleep() {
+  local dns_name="${1:?Usage: llm_sleep <model_dns_name>}"
+  
+  echo "Putting $dns_name to sleep..."
+  curl -sS -X POST "https://$dns_name.mmontes-internal.duckdns.org/sleep?level=2"
+}
+
+function llm_awake() {
+  local dns_name="${1:?Usage: llm_awake <model_dns_name>}"
+  
+  echo "Waking up $dns_name..."
+  curl -sS -X POST "https://$dns_name.mmontes-internal.duckdns.org/wake_up"
+}
+
+function llm_ping() {
+  local dns_name="${1:?Usage: llm_ping <model_dns_name> <model_name>}"
+  local model_id="${2:?Usage: llm_ping <model_dns_name> <model_name>}"
+  
+  echo "Pinging $model_id at $dns_name..."
+  curl -sS -X POST "https://$dns_name.mmontes-internal.duckdns.org/v1/completions" \
+    -H 'Content-Type: application/json' \
+    -d "{
+          \"model\": \"$model_id\",
+          \"prompt\": \"Hey, are you there?\"
+        }" | jq
+}
