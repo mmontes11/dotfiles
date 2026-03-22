@@ -42,6 +42,9 @@ function llm_awake() {
   
   echo "Waking up $dns_name..."
   curl -sS -X POST "https://$dns_name.mmontes-internal.duckdns.org/wake_up"
+  
+  echo "Resetting prefix cache for $dns_name..."
+  curl -sS -X POST "https://$dns_name.mmontes-internal.duckdns.org/reset_prefix_cache"
 }
 
 function llm_ping() {
