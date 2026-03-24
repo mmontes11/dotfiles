@@ -5,18 +5,11 @@
       "npm": "@ai-sdk/openai-compatible",
       "name": "Ollama",
       "options": {
-        "baseURL": "https://ollama.mmontes-internal.duckdns.org/v1"
+        "baseURL": "http://ollama:11434/v1"
       },
       "models": {
         "qwen3-coder:30b": {
           "name": "qwen3-coder:30b",
-          "limit": {
-            "context": 32768,
-            "output": 65536
-          }
-        },
-        "gpt-oss:20b": {
-          "name": "gpt-oss:20b",
           "limit": {
             "context": 32768,
             "output": 65536
@@ -30,37 +23,69 @@
           }
         }
       }
+    },
+    "llama-qwen35-35b": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Llama.cpp",
+      "options": {
+        "baseURL": "http://llama-qwen35-35b:8080/v1"
+      },
+      "models": {
+        "qwen35-35b": {
+          "name": "qwen35-35b",
+          "limit": {
+            "context": 49152,
+            "output": 65536
+          }
+        }
+      }
+    },
+    "llama-qwen35-35b-3q": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Llama.cpp",
+      "options": {
+        "baseURL": "http://llama-qwen35-35b-q3:8080/v1"
+      },
+      "models": {
+        "qwen35-35b-3q": {
+          "name": "qwen35-35b-3q",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          }
+        }
+      }
     }
   },
   "mcp": {
     "kubernetes": {
       "enabled": true,
       "type": "remote",
-      "url": "https://mcp-kubernetes.mmontes-internal.duckdns.org/mcp"
+      "url": "http://mcp-kubernetes:8080/mcp"
     },
     "grafana": {
       "enabled": true,
       "type": "remote",
-      "url": "https://mcp-grafana.mmontes-internal.duckdns.org/mcp"
-    },
-    "github": {
-      "enabled": true,
-      "type": "remote",
-      "url": "https://api.githubcopilot.com/mcp",
-      "headers": {
-        "Authorization": "Bearer GITHUB_TOKEN",
-        "X-MCP-Readonly": "true"
-      }
+      "url": "http://mcp-grafana:8000/mcp"
     },
     "photprism-mmontes": {
       "enabled": true,
       "type": "remote",
-      "url": "https://mcp-photoprism-mmontes.mmontes-internal.duckdns.org/mcp"
+      "url": "http://mcp-photoprism-mmontes:9001/mcp"
     },
     "photprism-xiaowen": {
       "enabled": true,
       "type": "remote",
-      "url": "https://mcp-photoprism-xiaowen.mmontes-internal.duckdns.org/mcp"
+      "url": "http://mcp-photoprism-xiaowen:9001/mcp"
+    },
+	  "github": {
+     	"type": "remote",
+      "enabled": true,
+			"url": "https://api.githubcopilot.com/mcp/",
+			"headers": {
+        "Authorization": "Bearer {env:GITHUB_TOKEN}",
+        "X-MCP-Readonly": "true"
+      }
     }
   }
 }
