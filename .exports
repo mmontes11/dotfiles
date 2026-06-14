@@ -12,6 +12,3 @@ export PATH=$PATH:$HOME/go/bin
 # kubernetes
 export KUBECONFIG=$HOME/.kube/config
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
-# ai
-export OLLAMA_HOST==https://ollama.mmontes-internal.duckdns.org
