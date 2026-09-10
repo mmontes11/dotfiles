@@ -39,5 +39,3 @@ ff = only
 autoSetupRemote = true
 [mailmap]
 file = ~/.mailmap
-[includeIf "gitdir:~/org/"]
-path = .gitconfig.org
