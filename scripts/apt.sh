@@ -51,7 +51,6 @@ pkgs=(
   qrencode
   rpi-imager
   sed
-  snapd
   socat
   speedtest-cli
   sshfs
