@@ -4,13 +4,13 @@ source ./scripts/lib.sh
 
 ARCH=$(get_architecture)
 
-# apt
-pkgs=(
-  default-jdk
-  vlc
-)
+# jdk
+apt install default-jdk
 
-apt install -y "${pkgs[@]}"
+# chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+apt install ./google-chrome-stable_current_amd64.deb
+rm google-chrome-stable_current_amd64.deb
 
 # vscode
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > /etc/apt/keyrings/packages.microsoft.gpg
@@ -43,38 +43,45 @@ wget -O discord.deb "https://discord.com/api/download?platform=linux"
 apt install -y ./discord.deb
 rm discord.deb
 
-# github cli
-GH_VERSION=$(curl -s https://api.github.com/repos/cli/cli/releases/latest | jq -r .tag_name | tr -d v)
-wget "https://github.com/cli/cli/releases/download/v${GH_VERSION}/gh_${GH_VERSION}_linux_${ARCH}.deb"
-apt install -y ./gh_${GH_VERSION}_linux_${ARCH}.deb
-rm gh_${GH_VERSION}_linux_${ARCH}.deb
-
-# goland
-GOLAND_VERSION=$(curl -sIL "https://data.services.jetbrains.com/products/download?code=GO&platform=linux" | grep -ioE 'location: .*goland-[0-9]+(\.[0-9]+)+\.tar\.gz' | head -1 | sed 's/.*goland-//; s/\.tar\.gz//')
-rm -rf /opt/goland-${GOLAND_VERSION}
-curl -Lo goland.tar.gz "https://data.services.jetbrains.com/products/download?code=GO&platform=linux"
-tar -C /opt -xzf goland.tar.gz
-rm goland.tar.gz
-ln -sf /opt/goland-${GOLAND_VERSION}/bin/goland.sh /usr/local/bin/goland
-
-# postman
-if [ "$ARCH" == "arm64" ]; then
-  POSTMAN_URL=https://dl.pstmn.io/download/latest/linux_arm64
-else
-  POSTMAN_URL=https://dl.pstmn.io/download/latest/linux64
-fi
-wget -O postman.deb "$POSTMAN_URL"
-apt install -y ./postman.deb
-rm postman.deb
-
-# telegram-desktop (x86_64 only)
-wget -O telegram.tar.xz "https://telegram.org/dl/desktop/linux"
-rm -rf /opt/Telegram
-tar -C /opt -xf telegram.tar.xz
-rm telegram.tar.xz
-ln -sf /opt/Telegram/Telegram /usr/local/bin/telegram-desktop
-
 # zoom (amd64 only)
 wget https://zoom.us/client/latest/zoom_amd64.deb
 apt install -y ./zoom_amd64.deb
 rm zoom_amd64.deb
+
+# git-delta
+wget https://github.com/dandavison/delta/releases/download/0.11.3/git-delta_0.11.3_amd64.deb
+apt install ./git-delta_0.11.3_amd64.deb
+rm git-delta_0.11.3_amd64.deb
+
+# postman
+rm -rf /opt/Postman
+tar -C /tmp/ -xzf <(curl -L https://dl.pstmn.io/download/latest/linux64) && mv /tmp/Postman /opt/
+tee /usr/share/applications/postman.desktop << END
+[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=/opt/Postman/Postman
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;
+END
+
+# vlc with rstp support (apt does not have live555, snap does not work in Ubuntu 26.04)
+# see: https://askubuntu.com/questions/1469388/upgraded-to-22-04-2-lts-now-vlc-cant-open-rtsp-stream
+apt install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.videolan.VLC
+tee /usr/share/applications/vlc.desktop << END
+[Desktop Entry]
+Encoding=UTF-8
+Name=VLC
+Comment=VLC
+Exec=flatpak run org.videolan.VLC %U
+Icon=Icon=org.videolan.VLC
+Terminal=false
+Type=Application
+Categories=AudioVideo;Video;Player;
+END
+
+update-desktop-database /usr/share/applications 2>/dev/null || true

@@ -15,3 +15,6 @@ install_scripts=(
 for i in "${!install_scripts[@]}"; do
   source "${install_scripts[$i]}"
 done
+
+# set zsh as default shell
+chsh -s $(which zsh)
