@@ -1,0 +1,93 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "update": "disable",
+  "permissions": [
+    { "action": "shell", "resource": "*", "effect": "ask" },
+    { "action": "shell", "resource": "cat *", "effect": "allow" },
+    { "action": "shell", "resource": "grep *", "effect": "allow" },
+    { "action": "shell", "resource": "git *", "effect": "allow" },
+    { "action": "shell", "resource": "git commit *", "effect": "ask" },
+    { "action": "shell", "resource": "git push *", "effect": "ask" },
+    { "action": "shell", "resource": "rm *", "effect": "deny" },
+    { "action": "shell", "resource": ":(){:|:&};:", "effect": "deny" },
+    { "action": "external_directory", "resource": "*", "effect": "ask" },
+    { "action": "edit", "resource": "*", "effect": "ask" },
+    { "action": "read", "resource": "*", "effect": "allow" },
+    { "action": "skill", "resource": "*", "effect": "allow" },
+    { "action": "webfetch", "resource": "*", "effect": "allow" },
+    { "action": "websearch", "resource": "*", "effect": "allow" }
+  ],
+  "model": "llama.cpp/qwen38:27b-q4-ctx157k",
+  "compaction": {
+    "auto": true,
+    "buffer": "10%"
+  },
+  "providers": {
+    "llama.cpp": {
+      "name": "Llama.cpp",
+      "package": "aisdk:@ai-sdk/openai-compatible",
+      "settings": {
+        "baseURL": "https://llamacpp.mmontes-internal.duckdns.org/v1"
+      },
+      "models": {
+        "gemma4:26b-ctx256k": {
+          "name": "gemma4:26b-ctx256k",
+          "limit": {
+            "context": 262144,
+            "input": 262144,
+            "output": 32768
+          },
+          "capabilities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        },
+        "qwen36:35b-ctx256k": {
+          "name": "qwen36:35b-ctx256k",
+          "limit": {
+            "context": 262144,
+            "input": 262144,
+            "output": 32768
+          }
+        },
+        "qwen38:27b-q4-ctx157k": {
+          "name": "qwen38:27b-q4-ctx157k",
+          "limit": {
+            "context": 160768,
+            "input": 160768,
+            "output": 32768
+          },
+          "variants": [
+            {
+              "id": "kubernetes",
+              "body": {
+                "temperature": 0.1
+              }
+            }
+          ]
+        },
+        "qwen38:27b-q5-ctx90k": {
+          "name": "qwen38:27b-q5-ctx90k",
+          "limit": {
+            "context": 92160,
+            "input": 92160,
+            "output": 32768
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "servers": {
+      "github": {
+        "type": "remote",
+        "url": "https://mcp-github.mmontes-internal.duckdns.org/mcp",
+        "oauth": false,
+        "headers": {
+          "Authorization": "Bearer {env:GITHUB_TOKEN}"
+        },
+        "disabled": false
+      }
+    }
+  }
+}
