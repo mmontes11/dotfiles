@@ -1,0 +1,57 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^scripts\\/ai.sh$/"
+      ],
+      "matchStrings": [
+        "UV_VERSION=\\${UV_VERSION:-(?<currentValue>.+?)}"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "astral-sh/uv"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^scripts\\/ai.sh$/"
+      ],
+      "matchStrings": [
+        "OPENCODE_VERSION=\\${OPENCODE_VERSION:-(?<currentValue>.+?)}"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "anomalyco/opencode"
+    },
+    {
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/^scripts\\/ai.sh$/"
+      ],
+      "matchStrings": [
+        "MULTICA_VERSION=\\${MULTICA_VERSION:-(?<currentValue>.+?)}"
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "multica-ai/multica"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "github-releases"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "groupName": "ai-dependencies"
+    }
+  ]
+}
