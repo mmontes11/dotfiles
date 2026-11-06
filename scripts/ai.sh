@@ -31,4 +31,5 @@ rm /tmp/multica.tar.gz
 
 echo "Configuring opencode..."
 mkdir -p ~/.config/opencode
-cp "$REPO_ROOT/opencode.json" ~/.config/opencode/opencode.json
+cp "$REPO_ROOT/opencode/opencode.json" ~/.config/opencode/opencode.json
+cp "$REPO_ROOT/opencode/cli.json" ~/.config/opencode/cli.json
