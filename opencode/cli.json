@@ -33,6 +33,9 @@
     "editor": true
   },
   "keybinds": {
-    "input.newline": "shift+enter,ctrl+j",
+    "input.newline": "shift+return,ctrl+return,alt+return,ctrl+j"
+  },
+  "terminal": {
+    "copy": "select"
   }
 }
