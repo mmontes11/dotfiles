@@ -11,7 +11,7 @@ curl -fsSL https://astral.sh/uv/${UV_VERSION}/install.sh | bash
 echo "Installing opencode..."
 # The installer is served per major version at /v<major>/install (e.g. /v2/install).
 # /v1/install does not exist, so major < 2 uses the unversioned /install.
-OPENCODE_VERSION=${OPENCODE_VERSION:-2.2.5}
+OPENCODE_VERSION=${OPENCODE_VERSION:-2.2.6}
 major="${OPENCODE_VERSION%%.*}"
 if [ "$major" -lt 2 ]; then
   install_url="https://opencode.ai/install"
